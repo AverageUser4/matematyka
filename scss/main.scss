@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul { list-style-type: none; }
+a { text-decoration: none; }
+
+.websiteWrapper { width: min(1450px, 90%); margin: auto; }
+
+
+/**********HEADER-LEFT**********/
+.headerLeftWrapper {
+  width: 600px;
+  float: left;
+
+  img {
+    float: left;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  .headerNav {
+    float: left;
+  }
+
+}
+
+.headerNavMainList {
+  & > li {
+    float: left;
+    margin: 10px 0 0;
+    padding: 10px;
+    position: relative;
+    transition: 0.5s;
+  }
+  & > li:hover {
+    background-color: #9E2C2C;
+    & > ul {
+      display: block;
+    }
+  }
+
+  & > li > a {
+    display: inline-block;
+    color: white;
+    font-size: 1.1rem;
+    background-color: #9E2C2C;
+    padding: 10px;
+  }
+
+  & > li > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 150px;
+  }
+  & > li > ul > li > a {
+    background-color: #1e1e1e;
+    color: #aaa;
+    padding: 10px;
+    display: block;
+    transition: 0.5s;
+  }
+  & > li > ul > li > a:hover {
+    background-color: #9E2C2C;
+    color: white;
+  }
+}
+
+
+/**********HEADER-LEFT**********/
+.headerRightWrapper {
+  float: right;
+  width: 250px;
+  text-align: right;
+
+  form {
+    margin: 20px 0 30px;
+    display: inline-block;
+  }
+  input[type=text] {
+    padding: 5px;
+    width: 125px;
+  }
+  input[type=submit] {
+    padding: 5px;
+  }
+
+  a {
+    display: inline-block;
+    background-color: #5E697D;
+    color: white;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 849px) {
+  .headerRightWrapper {
+    float: left;
+    text-align: left;
+  }
+}
+
+/***********MAIN***********/
+.mainAndAsideWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.main1 {
+  width: 1100px;
+  margin-right: 10px;
+}
+.mainContentWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
+}
+
+
+/************MATEMATYKA-MAIN-HEADER************/
+.introduction {
+  margin-bottom: 30px;
+
+  h1 {
+    color: #536675;
+    font-size: 3rem;
+  }
+  p {
+    padding-left: 5px;
+    font-size: 1.05rem;
+    line-height: 120%;
+  }
+}
+
+
+/**************MAIN-NAV**************/
+.mainNavWrapper {
+  width: 350px;
+  box-sizing: border-box;
+
+  h2 {
+    color: white;
+    background-color: #536675;
+    padding: 2px 10px;
+  }
+  p {
+    padding: 15px 15px 0;
+    font-size: 1.1rem;
+  }
+}
+
+.mainNav {
+  padding: 15px;
+
+  h3 {
+    color: #536675;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  a {
+    color: #536675;
+    &:hover { color: #B1B5A6; }
+  }
+
+  & > ul > li { margin: 0; }
+  & > ul > li > a { font-weight: bold; line-height: 140%; }
+  & > ul > li > ul { margin-left: 40px; }
+  & > ul > li > ul > li { 
+    line-height: 160%;
+    &:last-child { margin-bottom: 10px; }
+  }
+
+  li:before {
+    content:"•";
+    vertical-align:middle;
+    line-height:1rem;
+    font-size: 4rem;
+    color: #A9A5B9;
+    text-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
+    margin-right: 3px;
+  }
+}
+
+/**************SECTION***********/
+section {
+  background-color: rebeccapurple;
+  width: 300px;
+}
+
+.moduly { 
+  color: #536675;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+
+/************ASIDE***********/
+.aside1 {
+  width: 340px;
+}
